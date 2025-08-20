@@ -4,8 +4,8 @@ namespace Solid\LiskovSubstitution;
 
 class Rectangle
 {
-    protected $width;
-    protected $height;
+    protected float $width;
+    protected float $height;
 
     public function setWidth(float $width): void
     {

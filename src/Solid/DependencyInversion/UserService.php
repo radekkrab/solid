@@ -7,7 +7,9 @@ use Solid\SingleResponsibility\User;
 
 class UserService
 {
-    public function __construct(private readonly  LoggerInterface $logger) {}
+    public function __construct(private readonly LoggerInterface $logger)
+    {
+    }
 
     public function registerUser(User $user): bool
     {

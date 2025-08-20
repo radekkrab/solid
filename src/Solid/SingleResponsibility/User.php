@@ -4,7 +4,9 @@ namespace Solid\SingleResponsibility;
 
 class User
 {
-    public function __construct(private string $name, private string $email) {}
+    public function __construct(private readonly string $name, private readonly string $email)
+    {
+    }
 
     public function getName(): string
     {
