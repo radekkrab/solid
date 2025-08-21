@@ -1,20 +1,40 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Solid\LiskovSubstitution;
 
-use Solid\LiskovSubstitution\Rectangle;
+use Interfaces\ShapeInterface;
 
-class Square extends Rectangle
+class Square implements ShapeInterface
 {
-    public function setWidth(float $width): void
+    private float $side;
+
+    public function __construct(float $side = 0)
     {
-        $this->width = $width;
-        $this->height = $width;
+        $this->setSide($side);
     }
 
-    public function setHeight(float $height): void
+    public function setSide(float $side): void
     {
-        $this->width = $height;
-        $this->height = $height;
+        if ($side < 0) {
+            throw new \InvalidArgumentException('Side cannot be negative');
+        }
+        $this->side = $side;
+    }
+
+    public function getSide(): float
+    {
+        return $this->side;
+    }
+
+    public function getArea(): float
+    {
+        return $this->side * $this->side;
+    }
+
+    public function getPerimeter(): float
+    {
+        return 4 * $this->side;
     }
 }
