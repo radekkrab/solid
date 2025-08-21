@@ -1,0 +1,15 @@
+.git
+.gitignore
+.idea
+.vscode
+README.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+*.log
+logs/
+vendor/
+tests/
+.php-cs-fixer.cache
+phpstan.neon
+rector.php

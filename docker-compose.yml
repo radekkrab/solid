@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  solid-app:
+    build: .
+    container_name: solid-principles-demo
+    volumes:
+      - ./logs:/app/logs
+      - ./app.log:/app/app.log
+    environment:
+      - PHP_MEMORY_LIMIT=512M
+    command: php index.php
+
+  solid-app-interactive:
+    build: .
+    container_name: solid-principles-interactive
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+      - ./app.log:/app/app.log
+    environment:
+      - PHP_MEMORY_LIMIT=512M
+    stdin_open: true
+    tty: true
+    command: bash
+
+  solid-tests:
+    build: .
+    container_name: solid-principles-tests
+    volumes:
+      - .:/app
+    environment:
+      - PHP_MEMORY_LIMIT=512M
+    command: composer test
+
+  solid-analysis:
+    build: .
+    container_name: solid-principles-analysis
+    volumes:
+      - .:/app
+    environment:
+      - PHP_MEMORY_LIMIT=512M
+    command: composer analyse
+
+volumes:
+  logs:

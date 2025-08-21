@@ -1,0 +1,9 @@
+[2025-08-21 17:22:01] [info] User registered successfully | Context: {"name":"John Doe","email":"john@example.com","timestamp":"2025-08-21 17:22:01"}
+[2025-08-21 17:22:01] [info] User updated | Context: {"name":"John Doe","email":"john@example.com"}
+[2025-08-21 17:22:01] [warning] User deleted | Context: {"name":"John Doe","email":"john@example.com"}
+[2025-08-21 17:36:49] [info] User registered successfully | Context: {"name":"John Doe","email":"john@example.com","timestamp":"2025-08-21 17:36:49"}
+[2025-08-21 17:36:49] [info] User updated | Context: {"name":"John Doe","email":"john@example.com"}
+[2025-08-21 17:36:49] [warning] User deleted | Context: {"name":"John Doe","email":"john@example.com"}
+[2025-08-21 17:38:11] [info] User registered successfully | Context: {"name":"John Doe","email":"john@example.com","timestamp":"2025-08-21 17:38:11"}
+[2025-08-21 17:38:11] [info] User updated | Context: {"name":"John Doe","email":"john@example.com"}
+[2025-08-21 17:38:11] [warning] User deleted | Context: {"name":"John Doe","email":"john@example.com"}
